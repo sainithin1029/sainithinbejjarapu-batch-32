@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            let sending_amount=15300
+            let env="Prod"
+            if(env=="Dev"){
+                sending_amount +=sending_amount*0.1
+                
+            }
+            else if(env=="Test"){
+                sending_amount +=sending_amount*0.2
+                
+            }
+            else if(env=='Stage'){
+                sending_amount +=sending_amount*0.3
+                
+            }
+            else if(env=='Prod'){
+                sending_amount +=sending_amount*0.05
+                
+            }
+            else{
+                console.log("Invalid env.Default sending amount is displayed below")
+            }
+            console.log(sending_amount)
+            
+        </script>
+    </head>
+    <body>
+        <p style="color:green; background-color: aqua;">Sending Amount Calculator</p>
+    </body>
+</html>
